@@ -1,0 +1,474 @@
+<div class="extra_header"></div>
+<section id="form">
+    <div class="hero-image ">
+        <img src="{{config('app.url').'/storage/'.setting('site.diagnostic-image')}}" alt="" class="object-fit-cover d-none d-md-block">
+        <img src="{{config('app.url').'/storage/'.setting('site.diagnostic-image-mobile')}}" alt="" class="object-fit-cover d-block d-md-none">
+
+
+    </div>
+
+    <div class="formDatos container">
+        <h1>Conoce tu piel</h1>
+        <h3>Antes de empezar.<br> Solo debes mirarte al espejo, observar tu piel y responder las siguientes preguntas </h3>
+        <div></div>
+        <div name="genero" class="m-3 generoForm">
+            <h5>Para iniciar, seleccionar tu genero: </h5>
+            <input type="radio" name="genero" value="hombre" required="required" required id="hombre"> Hombre
+            <input type="radio" name="genero" value="mujer" id="mujer"> Mujer
+            <input type="radio" name="genero" value="otro" id="otro"> Otro
+            <div class="formBox">
+                <button id="btn" class="btn btn-primary btn-tester" onclick="iniciar(event)" type="submit">Iniciar</button>
+            </div>
+        </div>
+
+
+    </div>
+</section>
+
+
+
+<section class="FormGeneral Mujer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 part1  ">
+                <div class="TesterTitle text-center">
+                    <h2>Bienvenid@
+                        <!--<span id="nombreShow1">--></span>
+                        <br> al diagnosticador de piel DHEMS</h2>
+                </div>
+
+                <div class="quiz-container mx-auto card" id="quiz">
+                    <div class="quiz-header card-title text-center">
+                        <h4>¿Qué frase se adapta más a ti?</h4>
+                    </div>
+                    <div class="row justify-content-around">
+                        <div class="col-md-3 card cardA  text-center  ">
+                            <li>
+                                <img src="/storage/Diagnostic/Normal.png" id="mujer1" alt="" class="img-responsive imgAnswer card-image">
+
+                                <img src="/storage/Diagnostic/hombre_6.png" id="hombre1" alt="" class="img-responsive imgAnswer card-image">
+
+                                <img src="/storage/Diagnostic/otro_6.png" id="otro1" alt="" class="img-responsive imgAnswer card-image">
+
+                                <input type="radio" id="a" name="answer0" class="answer" value="a" required checked>
+                                <label for="a">Con una rutina básica de cuidado mantengo mi piel visiblemente sana</label>
+                            </li>
+                        </div>
+                        <div class="col-md-3 card cardB text-center ">
+                            <li>
+                                <img src="/storage/Diagnostic/Part1-3.png" id="mujer2" alt="" class="img-responsive imgAnswer card-image">
+                                <img src="/storage/Diagnostic/hombre_1.png" id="hombre2" alt="" class="img-responsive imgAnswer card-image">
+                                <img src="/storage/Diagnostic/otro_1.png" id="otro2" alt="" class="img-responsive imgAnswer card-image">
+                                <input type="radio" id="b" name="answer0" class="answer" value="b">
+                                <label for="b">Durante el día debo controlar que mi piel no este brillando mucho</label>
+                            </li>
+                        </div>
+                        <div class="col-md-3 card cardC text-center">
+                            <li>
+                                <img src="/storage/Diagnostic/Part1-4.png" id="mujer3" alt="" class="img-responsive imgAnswer">
+                                <img src="/storage/Diagnostic/hombre.png" id="hombre3" alt="" class="img-responsive imgAnswer">
+                                <img src="/storage/Diagnostic/otro.png" id="otro3" alt="" class="img-responsive imgAnswer">
+                                <input type="radio" id="c" name="answer0" class="answer" value="c">
+                                <label for="c">Durante el día mi zona'T' brilla,pero lo puedo controlarlo</label>
+                            </li>
+                        </div>
+                        <div class="col-md-3 card cardD text-center">
+                            <li>
+                                <img src="/storage/Diagnostic/Part1-5.png" id="mujer4" alt="" class="img-responsive imgAnswer">
+                                <img src="/storage/Diagnostic/hombre_7.png" id="hombre4" alt="" class="img-responsive imgAnswer">
+                                <img src="/storage/Diagnostic/otro_7.png" id="otro4" alt="" class="img-responsive imgAnswer">
+                                <input type="radio" id="d" name="answer0" class="answer" value="d">
+                                <label for="d">Durante el día debo hidratarme varias veces,lo bueno es que no tengo acné</label>
+                            </li>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <button onclick="seguir()" class="btn btn-primary btnTesterContinuar">Continuar</button>
+                    </div>
+
+
+                </div>
+
+
+            </div>
+            <div class="col-md-12 part2">
+                <div class="quiz-container mx-auto " id="quiz-1">
+                    <div class="quiz-header card-title text-center">
+                        <h4>¿Como se ven tus poros?</h4>
+                    </div>
+                    <div class="row justify-content-around">
+                        <div class="col-md-3 card  text-center ">
+                            <li>
+                                <img src="/storage/Diagnostic/Normal.png" id="mujer5" alt="" class="img-responsive imgAnswer card-image">
+                                <img src="/storage/Diagnostic/hombre_6.png" id="hombre5" alt="" class="img-responsive imgAnswer">
+                                <img src="/storage/Diagnostic/otro_6.png" id="otro5" alt="" class="img-responsive imgAnswer">
+
+
+                                <input type="radio" id="a1" name="answer1" class="answer" value="a" required checked>
+                                <label for="a1">Finos, de aspecto saludable</label>
+                            </li>
+                        </div>
+                        <div class="col-md-3 card  text-center ">
+                            <li>
+                                <img src="/storage/Diagnostic/Part2-2.png" id="mujer6" alt="" class="img-responsive imgAnswer">
+                                <img src="/storage/Diagnostic/hombre_10.png" id="hombre6" alt="" class="img-responsive imgAnswer">
+                                <img src="/storage/Diagnostic/otro_10.png" id="otro6" alt="" class="img-responsive imgAnswer">
+
+
+                                <input type="radio" id="b1" name="answer1" class="answer" value="b">
+                                <label for="b1">Agrandados y visibles</label>
+                            </li>
+                        </div>
+                        <div class="col-md-3 card  text-center ">
+                            <li>
+                                <img src="/storage/Diagnostic/Part2-3.png" id="mujer7" alt="" class="img-responsive imgAnswer">
+                                <img src="/storage/Diagnostic/hombre_11.png" id="hombre7" alt="" class="img-responsive imgAnswer">
+                                <img src="/storage/Diagnostic/otro_11.png" id="otro7" alt="" class="img-responsive imgAnswer">
+
+
+                                <input type="radio" id="c1" name="answer1" class="answer" value="c">
+                                <label for="c1">Agrandados solo en la zona'T' (frente, nariz y mentón)</label>
+                            </li>
+                        </div>
+                        <div class="col-md-3 card  text-center ">
+                            <li>
+                                <img src="/storage/Diagnostic/Part2-4.png" id="mujer8" alt="" class="img-responsive imgAnswer">
+                                <img src="/storage/Diagnostic/hombre_12.png" id="hombre8" alt="" class="img-responsive imgAnswer">
+                                <img src="/storage/Diagnostic/otro_12.png" id="otro8" alt="" class="img-responsive imgAnswer">
+
+
+
+                                <input type="radio" id="d1" name="answer1" class="answer" value="d">
+                                <label for="d1"> Pequeños en ocasiones noto parches de resequedad</label>
+                            </li>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <button onclick="seguir2()" class="btn btn-primary btnTesterContinuar">Continuar</button>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-12 part3">
+                <div class="quiz-container mx-auto card" id="quiz-1">
+                    <div class="quiz-header card-title text-center">
+                        <h4>¿Cuál es la característica más notoria en tu piel?</h4>
+                    </div>
+                    <div class="row justify-content-around">
+                        <div class="col-md-3 card  text-center ">
+                            <li>
+                                <img src="/storage/Diagnostic/Part3-1.png" alt="" id="mujer9" class="img-responsive imgAnswer">
+                                <img src="/storage/Diagnostic/hombre_13.png" id="hombre9" alt="" class="img-responsive imgAnswer">
+                                <img src="/storage/Diagnostic/otro_13.png" id="otro9" alt="" class="img-responsive imgAnswer">
+
+
+
+                                <input type="radio" id="a2" name="answer2" class="answer" value="a" required checked>
+                                <label for="a2">Casi nunca tengo acné y si sale seca rápido</label>
+                            </li>
+                        </div>
+                        <div class="col-md-3 card  text-center ">
+                            <li>
+                                <img src="/storage/Diagnostic/Part3-2.png" alt="" id="mujer10" class="img-responsive imgAnswer">
+                                <img src="/storage/Diagnostic/hombre_14.png" id="hombre10" alt="" class="img-responsive imgAnswer">
+                                <img src="/storage/Diagnostic/otro_14.png" id="otro10" alt="" class="img-responsive imgAnswer">
+
+
+                                <input type="radio" id="b2" name="answer2" class="answer" value="b">
+                                <label for="b2">Tengo acné confrecuencia con frecuencia, puntos negros, granitos rojizos y mi cabello se engrasa fácilmente</label>
+                            </li>
+                        </div>
+                        <div class="col-md-3 card  text-center ">
+                            <li>
+                                <img src="/storage/Diagnostic/Part3-3.png" alt="" id="mujer11" class="img-responsive imgAnswer">
+                                <img src="/storage/Diagnostic/hombre_8.png" id="hombre11" alt="" class="img-responsive imgAnswer">
+                                <img src="/storage/Diagnostic/otro_11.png" id="otro11" alt="" class="img-responsive imgAnswer">
+
+
+                                <input type="radio" id="c2" name="answer2" class="answer" value="c">
+                                <label for="c2">Me salen pocos puntos negros y con frecuencia en la zona'T', a veces tengo algo de acné</label>
+                            </li>
+                        </div>
+                        <div class="col-md-3 card  text-center ">
+                            <li>
+                                <img src="/storage/Diagnostic/Part3-4.png" alt="" id="mujer12" class="img-responsive imgAnswer">
+                                <img src="/storage/Diagnostic/hombre_9.png" id="hombre12" alt="" class="img-responsive imgAnswer">
+                                <img src="/storage/Diagnostic/otro_8.png" id="otro12" alt="" class="img-responsive imgAnswer">
+
+                                <input type="radio" id="d2" name="answer2" class="answer" value="d">
+                                <label for="d2"> Mi piel se siente tirante, a veces me pica y se descama</label>
+                            </li>
+                        </div>
+
+                        <div class="text-center">
+                            <button onclick="seguir3()" class="btn btn-primary btnTesterContinuar">Continuar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-12 part4">
+                <div class="quiz-container mx-auto card" id="quiz-1">
+                    <div class="quiz-header card-title text-center">
+                        <h4>¿Cuál es la textura que más observas en tu piel?</h4>
+                    </div>
+                    <div class="row justify-content-around">
+                        <div class="col-md-3 card  text-center ">
+                            <li>
+                                <img src="/storage/Diagnostic/Part4-1.png" alt="" id="mujer13" class="img-responsive imgAnswer">
+                                <img src="/storage/Diagnostic/hombre_2.png" id="hombre13" alt="" class="img-responsive imgAnswer">
+                                <img src="/storage/Diagnostic/otro_2.png" id="otro13" alt="" class="img-responsive imgAnswer">
+
+
+                                <input type="radio" id="a3" name="answer3" class="answer" value="a" required checked>
+                                <label for="a3">Textura aterciopelada, suave y lisa</label>
+                            </li>
+                        </div>
+                        <div class="col-md-3 card  text-center ">
+                            <li>
+                                <img src="/storage/Diagnostic/Part4-2.png" alt="" id="mujer14" class="img-responsive imgAnswer">
+                                <img src="/storage/Diagnostic/hombre_3.png" id="hombre14" alt="" class="img-responsive imgAnswer">
+                                <img src="/storage/Diagnostic/otro_3.png" id="otro14" alt="" class="img-responsive imgAnswer">
+
+
+                                <input type="radio" id="b3" name="answer3" class="answer" value="b">
+                                <label for="b3">Es gruesa, brilla la mayor parte del tiempo y en ocasiones tengo caspa</label>
+                            </li>
+                        </div>
+                        <div class="col-md-3 card  text-center ">
+                            <li>
+                                <img src="/storage/Diagnostic/Part4-3.png" alt="" id="mujer15" class="img-responsive imgAnswer">
+                                <img src="/storage/Diagnostic/hombre_4.png" id="hombre15" alt="" class="img-responsive imgAnswer">
+                                <img src="/storage/Diagnostic/otro_4.png" id="otro15" alt="" class="img-responsive imgAnswer">
+
+
+                                <input type="radio" id="c3" name="answer3" class="answer" value="c">
+                                <label for="c3">Solo brilla en la zona'T' aunque mis mejillas a veces están secas</label>
+                            </li>
+                        </div>
+                        <div class="col-md-3 card  text-center ">
+                            <li>
+                                <img src="/storage/Diagnostic/Part4-4.png" alt="" id="mujer16" class="img-responsive imgAnswer">
+                                <img src="/storage/Diagnostic/hombre_5.png" id="hombre16" alt="" class="img-responsive imgAnswer">
+                                <img src="/storage/Diagnostic/otro_5.png" id="otro16" alt="" class="img-responsive imgAnswer">
+
+
+                                <input type="radio" id="d3" name="answer3" class="answer" value="d">
+                                <label for="d3"> Mi piel se ve apagada y delgada,a veces veo arruguitas en los pliegues</label>
+                            </li>
+                        </div>
+                    </div>
+
+                    <div class="text-center">
+                        <button data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-primary btnTesterContinuar">Enviar</button>
+                    </div>
+                </div>
+            </div>
+</section>
+
+
+
+
+<section class="tipo1" id="">
+    <div class="container solucion-container mx-auto text-center">
+        <div class="row">
+            <div class="col-md-6">
+                <h4 id="nombreFinal" class="m-3"> </h4>
+                <h4>Tu tipo de piel es:</h4>
+                <img src="/storage/Diagnostic/Normal.png" alt="" id="Rmujer1" class="imgResultado">
+                <img src="/storage/Diagnostic/hombre_6.png" id="Rhombre1" alt="" class="img-responsive imgResultado">
+                <img src="/storage/Diagnostic/Normal.png" alt="" id="Rotro1" class="imgResultado">
+
+                <h3>Normal</h3>
+                <br>
+                <p>Tu piel no tiene necesidades especificas, pues es visiblemente luminosa, hidratada y sin imperfecciones, para conservarla así, lo ideal es que empieces una rutina preventiva para mantenerla así, a largo plazo.
+                </p>
+            </div>
+
+
+            <div class="col-md-6">
+                <h6 class="m-5">Los productos Recomendados para el cuidado, por tu tipo de piel, son: </h6>
+                <div class="row">
+                    <div class="col-md-4 text-center">
+                        <a href="/product/espuma-facial-antipolucion-dhems-160-ml"> <img src="/storage/products/December2021/OhBEyvVjfLoUJbxW86aX.png" class="RecomendacionImg" alt=""></a>
+                        <span>Espuma Facial Antipolución Dhems 160 ml</span>
+                    </div>
+                    <div class="col-md-4 text-center">
+                        <a href="/product/contorno-de-ojos-con-efecto-blur-dhems-15-ml"> <img src="/storage/products/January2022/7we74Z4pzgcO9Ewv5kU8.png" class="RecomendacionImg" alt=""> </a>
+                        <span>Contorno de Ojos con efecto blur Dhems 15 ml</span>
+                    </div>
+                    <div class="col-md-4 text-center">
+                        <a href="/product/hidratante-facial-doble-accion-con-spf-30-dhems-40-ml"> <img src="/storage/products/February2022/rQsoHpEcWHA9d3KmsVAy.png" class="RecomendacionImg" alt=""> </a>
+                        <span>Hidratante Facial doble Acción con spf 30 Dhems 40 ml</span>
+                    </div>
+
+                </div>
+
+                <a href="#" class="btn btn-primary btn-Resultado">Quiero Recibir recomendaciones</a>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section class="tipo2" id="">
+    <div class="container solucion-container mx-auto text-center">
+        <div class="row">
+            <div class="col-md-6">
+                <h4 id="nombreFinal1" class="m-3"> </h4>
+                <h4>Tu tipo de piel es:</h4>
+                <img src="/storage/Diagnostic/Grasa.png" alt="" id="Rmujer2" class="imgResultado">
+                <img src="/storage/Diagnostic/hombre_1.png" id="Rhombre2" alt="" class="img-responsive imgResultado">
+                <img src="/storage/Diagnostic/otro_1.png" alt="" id="Rotro2" class="imgResultado">
+
+                <h3>Grasa</h3>
+                <br>
+                <p>Tu piel, luce brillante a lo largo del día y debes usar productos que te ayuden a regular la oleosidad y prevenir la aparición de acné </p>
+            </div>
+
+            <div class="col-md-6">
+                <h6 class="m-5">Los productos Recomendados para el cuidado, por tu tipo de piel, son: </h6>
+                <div class="row">
+                    <div class="col-md-4 text-center">
+                        <a href="/product/gel-limpiador-pieles-grasas-y-mixtas-dhems-200-ml"> <img src="/storage/products/December2021/6emINj2LQ1GeOrUkpVYN.png" class="RecomendacionImg" alt=""></a>
+                        <span>Gel Limpiador Pieles Grasas y Mixtas Dhems 200 ml</span>
+                    </div>
+                    <div class="col-md-4 text-center">
+                        <a href="/product/emulsion-balanceadora-dhems-50-ml"> <img src="/storage/products/January2022/x8G3SOGt2zE5bfaDuXSh.png" class="RecomendacionImg" alt=""> </a>
+                        <span>Emulsión Balanceadora Dhems 50 ml</span>
+                    </div>
+                    <div class="col-md-4 text-center">
+                        <a href="/product/gel-corrector-de-imperfecciones-dhems-15-ml"> <img src="/storage/products/January2022/1i3wV09mHlNQCPRH1jxy.png" class="RecomendacionImg" alt=""> </a>
+                        <span>Gel Corrector de Imperfecciones Dhems 15 ml</span>
+                    </div>
+
+                </div>
+
+                <a href="#" class="btn btn-primary btn-Resultado">Quiero Recibir recomendaciones</a>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<section class="tipo3" id="">
+    <div class="container solucion-container mx-auto text-center">
+        <div class="row">
+            <div class="col-md-6">
+                <h4 id="nombreFinal2" class="m-3"> </h4>
+                <h4>Tu tipo de piel es:</h4>
+                <img src="/storage/Diagnostic/Mixta.png" alt="" id="Rmujer3" class="imgResultado">
+                <img src="/storage/Diagnostic/hombre.png" id="Rhombre3" alt="" class="img-responsive imgResultado">
+                <img src="/storage/Diagnostic/otro.png" alt="" id="Rotro3" class="imgResultado">
+
+                <h3>Mixta</h3>
+                <br>
+                <h6>Tu piel, luce brillante a lo largo del día y este brillo aparece concentrado en la zona “T” de tu rostro, debes usar productos que te ayuden a regular la oleosidad y prevenir la aparición de acné en esta zona e hidratar las mejillas
+                </h6>
+            </div>
+
+            <div class="col-md-6">
+                <h6 class="m-5">Los productos Recomendados para el cuidado, por tu tipo de piel, son: </h6>
+                <div class="row">
+                    <div class="col-md-4 text-center">
+                        <a href="/product/gel-limpiador-pieles-grasas-y-mixtas-dhems-200-ml"> <img src="/storage/products/December2021/6emINj2LQ1GeOrUkpVYN.png" class="RecomendacionImg" alt=""></a>
+                        <span>Gel Limpiador Pieles Grasas y Mixtas Dhems 200 ml</span>
+                    </div>
+                    <div class="col-md-4 text-center">
+                        <a href="/product/serum-vitamina-c-dhems-15-ml"> <img src="/storage/products/January2022/JHf2sTWbKy7zWGaJ6JTl.png" class="RecomendacionImg" alt=""> </a>
+                        <span>Sérum Vitamina C Dhems 15 ml</span>
+                    </div>
+                    <div class="col-md-4 text-center">
+                        <a href="/product/contorno-de-ojos-con-efecto-blur-dhems-15-ml"> <img src="/storage/products/January2022/7we74Z4pzgcO9Ewv5kU8.png" class="RecomendacionImg" alt=""> </a>
+                        <span>Contorno de Ojos con efecto blur Dhems 15 ml</span>
+                    </div>
+
+                </div>
+                <a href="#" class="btn btn-primary btn-Resultado">Quiero Recibir recomendaciones</a>
+
+                </<div>
+
+
+            </div>
+
+</section>
+
+<section class="tipo4" id="">
+    <div class="container solucion-container mx-auto text-center">
+        <div class="row">
+            <div class="col-md-6">
+                <h4 id="nombreFinal3" class="m-3"> </h4>
+                <h4>Tu tipo de piel es:</h4>
+                <img src="/storage/Diagnostic/Seca.png" alt="" id="Rmujer4" class="imgResultado">
+                <img src="/storage/Diagnostic/hombre_7.png" id="Rhombre4" alt="" class="img-responsive imgResultado">
+                <img src="/storage/Diagnostic/otro_7.png" alt="" id="Rotro4" class="imgResultado">
+
+                <h3>Seca</h3>
+                <br>
+                <h6>Tu piel, luce opaca y con grietas, debes darle un impulso de hidratación, para recuperar su humedad natural y su aspecto suave y luminoso
+                </h6>
+            </div>
+
+            <div class="col-md-6">
+                <h6 class="m-5">Los productos Recomendados para el cuidado, por tu tipo de piel, son: </h6>
+                <div class="row">
+                    <div class="col-md-4 text-center">
+                        <a href="/product/espuma-facial-antipolucion-dhems-160-ml"> <img src="/storage/products/December2021/OhBEyvVjfLoUJbxW86aX.png" class="RecomendacionImg" alt=""></a>
+                        <span>Espuma Facial Antipolución Dhems 160 ml</span>
+                    </div>
+                    <div class="col-md-4 text-center">
+                        <a href="/product/serum-con-acido-hialuronico-dhems"> <img src="/storage/products/January2022/0xTK6bENYGvSqJzctB8m.png" class="RecomendacionImg" alt=""> </a>
+                        <span>Serum con Ácido Hialuronico Dhems</span>
+                    </div>
+                    <div class="col-md-4 text-center">
+                        <a href="/product/hidratante-facial-doble-accion-con-spf-30-dhems-40-ml"> <img src="/storage/products/February2022/rQsoHpEcWHA9d3KmsVAy.png" class="RecomendacionImg" alt=""> </a>
+                        <span>Hidratante Facial doble Acción con spf 30 Dhems 40 ml</span>
+                    </div>
+
+                </div>
+                <a href="#" class="btn btn-primary btn-Resultado">Quiero Recibir recomendaciones</a>
+
+                </<div>
+            </div>
+
+        </div>
+</section>
+
+
+<!-- Modal FORM-->
+<div class="modal fade " id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header text-center">
+                <h5 class="modal-title" id="exampleModalLabel">Recibe las recomendaciones para el cuidado de tu tipo de piel.</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form name="diagnosticador" id="inputForm">
+                    <div class="formBox row">
+                        <div class="col-md-6 col-12 formGroup">
+                            <input type="text" class="Nombre" id="Nombre" placeholder="Nombre" required />
+                        </div>
+                        <div class="col-md-6 col-12 formGroup">
+                            <input type="text" class="Apellido" id="Apellido" placeholder="Apellido" required />
+                        </div>
+                        <div class="col-md-6 col-12 formGroup">
+                            <input type="email" id="mail" placeholder="Correo Electrónico" required />
+                        </div>
+
+                    </div>
+
+                    <div class="formBox text-center mt-5">
+                        <button onclick="envioDatos(event), getCheckboxValue()" type="button" class="btn btn-primary btnEnviarDatos" data-bs-dismiss="modal">Enviar</button>
+                    </div>
+
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
